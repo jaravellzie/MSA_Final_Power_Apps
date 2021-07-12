@@ -10,3 +10,12 @@ CompositePieChart2
              "CountbyPieChart", 
              CountRows(CSector)
         )
+
+Canvas1
+  ->DataCardGraph
+    ->LabelExpNumber
+      ->CountRows(Filter(MasterServiceAgreement, 'End Date' >= Today(), 'End Date' <= Today() + 365)) *Has Delagation Issues
+    ->LabelActiveMSANumber
+      ->CountRows(Filter(MasterServiceAgreement, Status.Value = "Active")) *Has Delagation Issue
+     
+ 
