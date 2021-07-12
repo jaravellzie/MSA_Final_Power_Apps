@@ -1,1 +1,12 @@
-
+CompositePieChart2
+  ->Items
+    -> 
+      AddColumns(
+          GroupBy(
+             AddColumns(MasterServiceAgreement, "PieChart", 'Client Sector'.Value),
+             "PieChart", 
+             "CSector"
+                  ), 
+             "CountbyPieChart", 
+             CountRows(CSector)
+        )
