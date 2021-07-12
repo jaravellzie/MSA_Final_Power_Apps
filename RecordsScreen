@@ -1,1 +1,17 @@
+Canvas2
+  ->Canvas2
+    ->DataCard2
+      ->RecordGallery
+        ->Items
+          ->
+          SortByColumns(Filter(MasterServiceAgreement,
+          'Client Sector'.Value = ComboBoxClientSector.Selected.Value 
+          ||
+          IsBlank(ComboBoxClientSector.SelectedItems.Value)
+          ||
+          IsEmpty(ComboBoxClientSector.SelectedItems)
+          ,
+          StartsWith('Client Name',CSC_textbox_1.Text),
+          StartsWith('(Global) Account Leader'.DisplayName,CSC_textbox_2.Text)
+          ),"Modified",Descending)
 
