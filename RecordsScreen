@@ -1,8 +1,8 @@
 Canvas2
-  ->Canvas2
-    ->DataCard2
-      ->RecordGallery
-        ->Items
+  -> Canvas2
+    -> DataCard2
+      -> RecordGallery
+        -> Items
           ->
           SortByColumns(Filter(MasterServiceAgreement,
           'Client Sector'.Value = ComboBoxClientSector.Selected.Value 
@@ -15,3 +15,13 @@ Canvas2
           StartsWith('(Global) Account Leader'.DisplayName,CSC_textbox_2.Text)
           ),"Modified",Descending)
 
+
+ComboBoxClientSector
+  -> Items
+    -> Choices(MasterServiceAgreement.'Client Sector')
+
+AddBtn
+  -> OnSelect
+    -> Navigate(AddForm,ScreenTransition.Fade); EditForm(FormAdd_1)
+    
+  
