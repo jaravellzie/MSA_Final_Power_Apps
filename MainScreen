@@ -3,7 +3,7 @@ EmployeeNameInvi
     -> Lower(LookUp(Employee_WHA, MSAUser.Email = varUserEmail).MSAUser.Email)
   -> Color
     -> RGBA(0, 0, 0, 0) /* Transparent */
- 
+ //
 NextIcon
   -> OnSelect
     -> Navigate(ClientBarChartScreen,ScreenTransition.Fade); Set(SetQuery,"Active");
